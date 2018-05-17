@@ -1,6 +1,7 @@
 using System;
 namespace AmineV02.Models
 {
+    //TM
     public class TranslateModel
     {
         private String phrase;
@@ -13,6 +14,7 @@ namespace AmineV02.Models
             return phrase;
         }
 
+        
         public void setPhrase(String phrase) {
             this.phrase = phrase;
         }
