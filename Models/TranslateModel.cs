@@ -18,6 +18,7 @@ namespace AmineV02.Models
         }
 
         public String translatePhrase() {
+            // here is my translation model
             switch(phrase) {
                 case "lait":
                     return "Milch";
