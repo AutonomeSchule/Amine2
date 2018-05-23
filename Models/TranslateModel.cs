@@ -19,6 +19,7 @@ namespace AmineV02.Models
             this.phrase = phrase;
         }
 
+
         public String translatePhrase() {
             // here is my translation model
             switch(phrase) {
