@@ -5,6 +5,7 @@ namespace AmineV02.Models
     public class TranslateModel
     {
         private String phrase;
+        private String zielsprache;
 
         public TranslateModel(String phrase) {
             this.phrase = phrase;
@@ -12,31 +13,108 @@ namespace AmineV02.Models
 
         public String getPhrase() {
             return phrase;
+
+        }
+
+        public String getzielsprache() {
+            return zielsprache;
+            
         }
 
         
         public void setPhrase(String phrase) {
             this.phrase = phrase;
         }
-
+ public void setZielsprache(String zielsprache) {
+            this.zielsprache = zielsprache;
+        }
 
         public String translatePhrase() {
             // here is my translation model
-            switch(phrase) {
-                case "lait":
-                    return "Milch";
-                case "fromage":
-                    return "Käse";
-                case "miel":
-                    return "Honig";
-                case "orange":
-                    return "Orangen";
-                case "auto":
-                    return "Wagen";
-                default:
-                    return "jetzt läuft alles super";
+            switch(zielsprache) {
+                case "ar":
+                    switch(phrase) {
+                        case "lait":
+                            return "حليب";
+                        case "fromage":
+                            return "جبن";
+                        case "miel":
+                            return "عسل";
+                        case "orange":
+                            return "برتقال";
+                        case "auto":
+                            return "سيارة";
+                        default:
+                            return "للأسف نحن لا نعرف ذلك";
+                    }
+                case "de":
+                    switch(phrase) {
+                        case "lait":
+                            return "Milch";
+                        case "fromage":
+                            return "Käse";
+                        case "miel":
+                            return "Honig";
+                        case "orange":
+                            return "Orangen";
+                        case "auto":
+                            return "Wagen";
+                        default:
+                            return "Das kennen wir leider nicht";
+                    }
+                    case "en":
+                        switch(phrase) {
+                            case "lait":
+                                return "Milk";
+                            case "fromage":
+                                return "Cheese";
+                            case "miel":
+                                return "Hony";
+                            case "orange":
+                                return "Orange";
+                            case "auto":
+                                return "car";      
+                            default:
+                                return "Unfortunately we do not know that";
+                        }
+                    case "fr":
+                        switch(phrase) {
+                            case "lait":
+                                return "lait";
+                            case "fromage":
+                                return "Käse";
+                            case "miel":
+                                return "Honig";
+                            case "orange":
+                                return "Orangen";
+                            case "auto":
+                                return "Wagen";
+                            default:
+                                return "Malheureusement, nous ne le savons pas";
+                        }
+                    case "gn-po":
+                        switch(phrase) {
+                            case "lait":
+                                return "حليب";
+                            case "fromage":
+                                return "Käse";
+                            case "miel":
+                                return "Honig";
+                            case "orange":
+                                return "Orangen";
+                            case "auto":
+                                return "Wagen";
+                            default:
+                                return "Das kennen wir leider nicht";
+                        }
+                        default:
+                        return "Tut uns leid wir kennen diese sprache nicht";
             }
         }
+
+        
+
+        
         
     }
 }

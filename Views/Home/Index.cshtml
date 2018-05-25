@@ -54,12 +54,12 @@
         </div>
 
         <div class="item">
-            <img src="~/images/logo.png" alt="Microsoft Azure" class="img-responsive" />
+            <img src="~/images/logo.png","~/images/logo.png" alt="Microsoft Azure" class="img-responsive" />
             <div class="carousel-caption" role="option">
                 <p>
-                    Learn how Microsoft's Azure cloud platform allows you to build, deploy, and scale web apps.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525027&clcid=0x409" target="_blank">
-                        Learn More
+                   
+                   
+                        
                     </a>
                 </p>
             </div>
@@ -94,7 +94,20 @@
 
 <div class="row">
     <div class="col-md-3">
-        <h2> Hallo Amine, @ViewData["phrase2"]!</h2>
+        <form method="POST" action="/Home/Index">
+            <input type="text" name="wort">
+            <select name="zielsprache">
+                <option value="ar">العربية</option>
+                <option value="de">Deutsch</option>
+                <option value="en">English</option>
+                <option value="fr">Francais</option>
+                <option value="gn-po">Poular</option>
+            </select>
+            <input type="submit" value="fragen">
+        </form>
+        <h2> Hallo Amine!</h2>
+        <p style="font-size:30px;">Die Antwort ist:  @ViewData["phrase2"]</p>
+      
         <ul>
             <li>Sample pages using ASP.NET Core MVC</li>
             <li>Theming using <a href="https://go.microsoft.com/fwlink/?LinkID=398939" target="_blank">Mon Aplikation</a></li>

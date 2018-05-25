@@ -10,13 +10,13 @@ namespace AmineV02.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Index(String wort, String zielsprache)
         {
-            //sfgsdfgsdf
             TranslateModel tm = new TranslateModel("maitenant tout est parfait");
             ViewData["phrase"] = tm.translatePhrase();
-            tm.setPhrase("miel");
-            ViewData["phrase2"] = tm.translatePhrase(); 
+            tm.setPhrase(wort);
+            tm.setZielsprache(zielsprache);
+            ViewData["phrase2"] = tm.translatePhrase();
             return View();
         }
 
