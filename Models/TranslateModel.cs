@@ -1,9 +1,33 @@
 using System;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Collections.Generic;
+
+
 namespace AmineV02.Models
 {
+
+
+
+    public class CountryViewModel
+    {
+        public string Country { get; set; }
+
+        public List<SelectListItem> Countries { get; } = new List<SelectListItem>
+        {
+            new SelectListItem { Value = "ar-fr", Text = "العربية-Francais" },
+            new SelectListItem { Value = "fr-ar", Text = "Francais-العربية" },
+            new SelectListItem { Value = "de", Text = "Deutsch" },
+            new SelectListItem { Value = "en", Text = "English"  },
+            new SelectListItem { Value = "fr", Text = "Francais" },
+            new SelectListItem { Value = "gn-po", Text = "Poular"  },
+        };
+    }
+
+
     //TM
     public class TranslateModel
     {
+        
         private String phrase;
         private String zielsprache;
 
@@ -25,14 +49,14 @@ namespace AmineV02.Models
         public void setPhrase(String phrase) {
             this.phrase = phrase;
         }
- public void setZielsprache(String zielsprache) {
+        public void setZielsprache(String zielsprache) {
             this.zielsprache = zielsprache;
         }
 
         public String translatePhrase() {
             // here is my translation model
             switch(zielsprache) {
-                case "ar":
+                case "fr-ar":
                     switch(phrase) {
                         case "lait":
                             return "حليب";
@@ -47,6 +71,24 @@ namespace AmineV02.Models
                         default:
                             return "للأسف نحن لا نعرف ذلك";
                     }
+                      case "ar-fr":
+                    switch(phrase) {
+                        case "حليب":
+                            return "lait";
+                        case "جبن":
+                            return "fromage";
+                        case "عسل":
+                            return "miel";
+                        case "برتقال":
+                            return "orange";
+                        case "سيارة":
+                            return "auto";
+                        default:
+                            return "Malheureusement, nous ne le savons pas";
+                    }
+
+
+
                 case "de":
                     switch(phrase) {
                         case "lait":
@@ -107,6 +149,8 @@ namespace AmineV02.Models
                             default:
                                 return "Das kennen wir leider nicht";
                         }
+
+                        
                         default:
                         return "Tut uns leid wir kennen diese sprache nicht";
             }

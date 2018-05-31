@@ -11,7 +11,6 @@
         <li data-target="#myCarousel" data-slide-to="4"></li>
         <li data-target="#myCarousel" data-slide-to="5"></li>
         <li data-target="#myCarousel" data-slide-to="6"></li>
-        <li data-target="#myCarousel" data-slide-to="7"></li>
      </ol>  
      
     <div class="carousel-inner" role="listbox">
@@ -92,20 +91,38 @@
 </div>
 
 
+
+
+
 <div class="row">
     <div class="col-md-3">
+
+
+        @model CountryViewModel
+
+        <form asp-controller="Home" asp-action="Index" method="post">
+            <select asp-for="Country" asp-items="Model.Countries"></select> 
+            <br /><button type="submit">Register</button>
+        </form>
+
+
+
+
         <form method="POST" action="/Home/Index">
             <input type="text" name="wort">
             <select name="zielsprache">
-                <option value="ar">العربية</option>
-                <option value="de">Deutsch</option>
-                <option value="en">English</option>
-                <option value="fr">Francais</option>
-                <option value="gn-po">Poular</option>
+                <option selected="selected"  value="ar-fr">العربية-Francais</option>
+                <option selected="selected"  value="fr-ar">Francais-العربية</option>
+                <option selected="selected"  value="de">Deutsch</option>
+                <option selected="selected"  value="en">English</option>
+                <option selected="selected"  value="fr">Francais</option>
+                <option selected="selected"  value="gn-po">Poular</option>
             </select>
+
             <input type="submit" value="fragen">
         </form>
         <h2> Hallo Amine!</h2>
+ 
         <p style="font-size:30px;">Die Antwort ist:  @ViewData["phrase2"]</p>
       
         <ul>
