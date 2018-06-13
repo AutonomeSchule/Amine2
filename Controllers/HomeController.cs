@@ -11,19 +11,17 @@ namespace AmineV02.Controllers
     public class HomeController : Controller
     {
 
-        public IActionResult Index(String wort, String zielsprache, String Country)
+        public IActionResult Index(String wort, String Zielsprache)
         {
             TranslateModel tm = new TranslateModel("maitenant tout est parfait");
             ViewData["phrase"] = tm.translatePhrase();
             tm.setPhrase(wort);
-            tm.setZielsprache(zielsprache);
+            tm.setZielsprache(Zielsprache);
             ViewData["phrase2"] = tm.translatePhrase();
 
-            ViewData["zielsprache"] = zielsprache;
+            ViewData["zielsprache"] = Zielsprache;
 
-            var model = new CountryViewModel();
-            //model.Country = "CA";
-            //model.Country= zielsprache;
+            var model = new ZielspracheViewModel();
             return View(model);
 
         }
@@ -50,7 +48,7 @@ namespace AmineV02.Controllers
 
         public IActionResult Platz()
         {
-            ViewData["Message"] = "Unser Ort";
+                ViewData["Message"] = "Unser Ort";
 
             return View();
         }
@@ -58,5 +56,6 @@ namespace AmineV02.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+        
     }
 }

@@ -8,11 +8,11 @@ namespace AmineV02.Models
 
 
 
-    public class CountryViewModel
+    public class ZielspracheViewModel
     {
-        public string Country { get; set; }
+        public string Zielsprache { get; set; }
 
-        public List<SelectListItem> Countries { get; } = new List<SelectListItem>
+        public List<SelectListItem> Zielsprachen { get; } = new List<SelectListItem>
         {
             new SelectListItem { Value = "ar-fr", Text = "العربية-Francais" },
             new SelectListItem { Value = "fr-ar", Text = "Francais-العربية" },
@@ -153,9 +153,15 @@ namespace AmineV02.Models
                         
                         default:
                         return "Tut uns leid wir kennen diese sprache nicht";
+
             }
         }
 
+        public String setProjekt(String projekt) {
+            projekt="Menschen treffen";
+            return projekt;
+        }
+        
         
 
         

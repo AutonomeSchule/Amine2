@@ -53,7 +53,7 @@
         </div>
 
         <div class="item">
-            <img src="~/images/logo.png","~/images/logo.png" alt="Microsoft Azure" class="img-responsive" />
+            <img src="~/images/logo.png","~/images/logo.png;~/images/logo.png" alt="Microsoft Azure" class="img-responsive" />
             <div class="carousel-caption" role="option">
                 <p>
                    
@@ -98,32 +98,20 @@
     <div class="col-md-3">
 
 
-        @model CountryViewModel
+        @model ZielspracheViewModel
 
         <form asp-controller="Home" asp-action="Index" method="post">
-            <select asp-for="Country" asp-items="Model.Countries"></select> 
-            <br /><button type="submit">Register</button>
+            <select asp-for="Zielsprache" asp-items="Model.Zielsprachen"></select> 
+            <button type="submit">fragen/question</button>
+            <input type="text" name="wort"><br/>
         </form>
 
 
+        <h2> <h1 style="background-color:rgb(248, 244, 25);">AMINE!</h1></h2>
+        <p style="font-size:30px;border:1px solid rgb(34, 131, 223);padding:10px;margin-left:-10px;border-radius:5px;background:rgb(98, 231, 9);">Die Antwort ist:</p>
 
 
-        <form method="POST" action="/Home/Index">
-            <input type="text" name="wort">
-            <select name="zielsprache">
-                <option selected="selected"  value="ar-fr">العربية-Francais</option>
-                <option selected="selected"  value="fr-ar">Francais-العربية</option>
-                <option selected="selected"  value="de">Deutsch</option>
-                <option selected="selected"  value="en">English</option>
-                <option selected="selected"  value="fr">Francais</option>
-                <option selected="selected"  value="gn-po">Poular</option>
-            </select>
-
-            <input type="submit" value="fragen">
-        </form>
-        <h2> Hallo Amine!</h2>
- 
-        <p style="font-size:30px;">Die Antwort ist:  @ViewData["phrase2"]</p>
+        <p style="font-size:30px;border:1px solid #ccc;padding:10px;margin-left:-10px;border-radius:5px;background:rgb(252, 241, 241);"> @(ViewData["phrase2"])</p>
       
         <ul>
             <li>Sample pages using ASP.NET Core MVC</li>
@@ -135,6 +123,18 @@
         <ul>
             <li><a href="http://www.africaguinee.com/" target="_blank">Guinea Zeitung</a></li>
             <li><a href="https://go.microsoft.com/fwlink/?LinkId=699315" target="_blank">Manage User Secrets using Secret Manager.</a></li>
+            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699316" target="_blank">Use logging to log a message.</a></li>
+            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699317" target="_blank">Add packages using NuGet.</a></li>
+            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699319" target="_blank">Target development, staging or production environment.</a></li>
+        </ul>
+    </div>
+
+    <div class="col-md-3">
+        <p style="font-size:30px;border:10px solid rgb(235, 84, 227);padding:10px;margin-left:-10px;border-radius:5px;background:rgb(143, 243, 76);">C  o  o  l  e  s</p>
+
+        <ul>
+            <li><a href="/Projekt/Index">Mein Projekt</a></li>
+            <li><a href="/Strategie/Index">Die Strategien</a></li>
             <li><a href="https://go.microsoft.com/fwlink/?LinkId=699316" target="_blank">Use logging to log a message.</a></li>
             <li><a href="https://go.microsoft.com/fwlink/?LinkId=699317" target="_blank">Add packages using NuGet.</a></li>
             <li><a href="https://go.microsoft.com/fwlink/?LinkId=699319" target="_blank">Target development, staging or production environment.</a></li>
