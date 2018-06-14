@@ -11,9 +11,10 @@ using System;
 namespace AmineV02.Migrations
 {
     [DbContext(typeof(AMINEV02Context))]
-    partial class AMINEV02ContextModelSnapshot : ModelSnapshot
+    [Migration("20180614175916_InitialCreate2")]
+    partial class InitialCreate2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -35,8 +36,6 @@ namespace AmineV02.Migrations
                     b.Property<int>("Phonenumber");
 
                     b.Property<decimal>("Price");
-
-                    b.Property<bool>("vegan");
 
                     b.HasKey("ID");
 

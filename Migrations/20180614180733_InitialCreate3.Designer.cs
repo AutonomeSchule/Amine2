@@ -11,9 +11,10 @@ using System;
 namespace AmineV02.Migrations
 {
     [DbContext(typeof(AMINEV02Context))]
-    partial class AMINEV02ContextModelSnapshot : ModelSnapshot
+    [Migration("20180614180733_InitialCreate3")]
+    partial class InitialCreate3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

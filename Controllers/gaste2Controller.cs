@@ -53,7 +53,7 @@ namespace AmineV02.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,Name,Ankunft,Genre,Price,Phonenumber")] Gaeste gaeste)
+        public async Task<IActionResult> Create([Bind("ID,Name,Ankunft,Genre,Price,Phonenumber,Email,vegan")] Gaeste gaeste)
         {
             if (ModelState.IsValid)
             {
@@ -85,7 +85,7 @@ namespace AmineV02.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,Name,Ankunft,Genre,Price,Phonenumber")] Gaeste gaeste)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,Name,Ankunft,Genre,Price,Phonenumber,Email,vegan")] Gaeste gaeste)
         {
             if (id != gaeste.ID)
             {
