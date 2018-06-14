@@ -33,3 +33,35 @@
         display: none;
     }
 }
+
+.titel-p {
+    text-align:center;
+    font-size:30px;
+    border:10px solid rgb(235, 84, 227);
+    padding:10px;
+    margin-left:-10px;
+    border-radius:5px;
+    background:rgb(143, 243, 76);
+    letter-spacing:14px;
+    text-indent:14px;
+    text-transform:full-width;
+}
+.margin-top-20 {
+    margin:20px 0 0 0;
+}
+.carousel-control {
+    widows: 100%;
+}
+.img-responsive {
+    margin:0 auto;
+}
+
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+  }
+  
+  .navbar .navbar-collapse {
+    text-align: center;
+  }
