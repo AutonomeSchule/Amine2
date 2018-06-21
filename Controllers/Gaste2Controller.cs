@@ -9,11 +9,11 @@ using AMINEV02.Models;
 
 namespace AmineV02.Controllers
 {
-    public class gaste2Controller : Controller
+    public class Gaste2Controller : Controller
     {
         private readonly AMINEV02Context _context;
 
-        public gaste2Controller(AMINEV02Context context)
+        public Gaste2Controller(AMINEV02Context context)
         {
             _context = context;
         }
