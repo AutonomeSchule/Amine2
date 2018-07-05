@@ -9,11 +9,8 @@ namespace AMINEV02.Models
         public string Name { get; set; }
         public string Nachname {get; set; }
         public DateTime Ankunft { get; set; }
-
-
         [Required]
         public string Genre { get; set; }
-
         [Required] 
         public string Wunsch { get; set; } 
 
@@ -23,6 +20,8 @@ namespace AMINEV02.Models
         [RegularExpression(@"07[6789][0-9]{3}[0-9]{2}[0-9]{2}")]
          public decimal Phonenumber {get;set;}
         public string Email  {get;set;}
+
+        
         public bool vegan  {get;set;}
 
     
