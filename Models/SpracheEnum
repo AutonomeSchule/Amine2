@@ -1,0 +1,1 @@
+enum Sprache {Englisch, Französisch, Deutsch}
